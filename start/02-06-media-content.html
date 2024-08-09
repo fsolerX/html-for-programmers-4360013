@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Content</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Media Content</title>
-</head>
+  <body>
+    <!-- Images -->
+    <img src="../assets/beach.png" alt="Beach at the sunset with a dark pier."/>
+    <img src="https://explorecalifornia.org/_images/mission_look.jpg" alt="A person standing on 
+    a beach with rocks in the distance.">
+    <!-- 
+    img srcset for potential img sources & sizes for users
+    with limited conections:
+    <img 
+      srcset="beach-520w.jpg 520w, beach-750w.jpg 750w"
+      sizes="(max-width: 750px) 520px, 750px" 
+      src="beach-750w.jpg"
+      alt="Man standing on a beach"/> 
+    -->
 
-<body>
-  <!-- Images -->
-  <!-- Audio -->
-  <!-- Video -->
-</body>
+    <!-- Audio -->
+    <audio src="../assets/chill-out.mp3" controls=""></audio>
+    <!-- Another way embed audio from various src when a browser
+     doesn't support a specific file type:
 
+     <audio controls>
+      <source type="audio/mp3" src="../assets/chill-out.mp3">
+     </audio>     
+    -->
+
+    <!-- Video -->
+    <video width="450" height="275" controls>
+      <source src="../assets/writing-in-a-journal.mp4" type="video/mp4">
+      Your browser doesn't support the video tag.
+    </video> 
+  </body>
 </html>
