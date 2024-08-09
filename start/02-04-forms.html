@@ -1,13 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forms</title>
-</head>
-<body>
-</body>
+  <form action="" method="post">
+    <label for="full name">Full Name</label>
+    <br />
+    <input type="text" id="full-name" placeholder="Emma Bostian" />
+    <br />
 
+    <label for="email">Email address</label>
+    <br />
+    <input type="email" id="email" placeholder="bostian@gmail.com" />
+    <br />
+
+    <label for="telephone">Phone number</label>
+    <br />
+    <input type="tel" id="telephone" placeholder="845-111-6621" />
+    <br />
+
+    <label for="date">Date</label>
+    <br />
+    <input type="date" id="date" />
+    <br />
+
+    <label for="num-guests">Number of guests</label>
+    <br />
+    <select name="num-guests" id="num-guests">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+    <br />
+
+    <button type="submint">Submit</button>
+
+    <!-- <br> or break element is considered bad practice, 
+     and can negatively impact users that need assistive technology.
+     It's recommended instead to use block elements, or CSS, to alter 
+     the flow of the text content-->
+     
+     <!--This course won't dive into every aspect of creating accessible 
+     HTML forms, BUT USING THE SEMANTIC FORM ELEMENTS will ensure that 
+     you're on your way to creating accessible forms. -->
+  </form>
+
+  <body></body>
 </html>
