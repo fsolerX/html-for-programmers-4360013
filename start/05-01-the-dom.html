@@ -20,8 +20,21 @@
   </header>
   
   <script>
-    
+    const header = document.querySelector('#header');
+    const nav = header.childNodes[1];
+    const list = nav.childNodes[1];
+    const firstListItem = list.childNodes[1];
+    const firstLink = firstListItem.childNodes[0];
+    console.log(firstLink);
+
   </script>
+  <!-- Other node properties to traverse and mutate the DOM:
+      parentNode, lastChild, firstChild, previousSibling, 
+      nextSibling, innerHTML and textContent. 
+      Having a strong understanding of what the DOM is  
+      and how to use it will greatly improve your web 
+      development skills and allow you to write JavaScript 
+      code with confidence.-->
 </body>
 
 </html>
