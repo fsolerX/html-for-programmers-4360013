@@ -46,7 +46,86 @@
       }
     ];
 
+    const wrapper = document.querySelector('.wrapper');
+    socials.forEach(user => {
+      let socialWrapper = document.createElement('div');
+      socialWrapper.style = 'border: 1px solid black';
+
+      let avatar = document.createElement('img');
+      avatar.src = user.avatar;
+      avatar.alt = user.name;
+      socialWrapper.appendChild(avatar);
+
+      let name = document.createElement('h3');
+      name.innerText = user.name;
+      socialWrapper.appendChild(name);
+
+      let location = document.createElement('p');
+      location.innerText = user.country;
+
+      let city = document.createElement('a');
+      city.src = '#';
+      city.appendChild(document.createTextNode(`${user.city}, `));
+
+      location.prepend(city);
+      socialWrapper.appendChild(location);
+
+      let addFriendButton = document.createElement('button');
+      addFriendButton.innerText = 'Add Friend';
+      socialWrapper.append(addFriendButton);
+      
+      wrapper.appendChild(socialWrapper);
+    })
   </script>
 </body>
+<!--
+Dynamic DOM Generation: 
+JavaScript allows for the dynamic creation of HTML elements by 
+generating DOM nodes once data is available, such as creating 
+social cards based on user data.
 
+Iterating Over Data: 
+Use a forEach loop to iterate over an array of objects (e.g., users)
+and generate corresponding HTML elements for each piece of 
+information (e.g., name, city, avatar).
+
+Creating and Styling Elements: 
+Use document.createElement to create new DOM nodes (e.g., div, img) 
+and style them with properties like style.border to visually 
+differentiate elements.
+
+Setting Attributes: 
+Assign attributes like src and alt directly to created nodes 
+(e.g., setting the image source and alt text for user avatars) 
+to make the elements functional.
+
+Appending Elements: 
+Use appendChild or append methods to add newly created nodes 
+(e.g., avatar image) to parent nodes (e.g., social card wrapper) 
+and then append the parent node to the DOM.
+
+Selecting DOM Nodes: 
+Use methods like document.querySelector and document.getElementById 
+to get references to existing DOM nodes where new elements will be 
+appended.
+
+Handling Text Content Safely: 
+Use innerText or textContent to safely add text to elements, which 
+helps prevent security vulnerabilities like cross-site scripting 
+attacks.
+
+Nesting Elements: 
+For nested elements (e.g., a link inside a paragraph), create each 
+node separately, and use methods like prepend to insert nodes in the 
+correct order.
+
+Appending Multiple Nodes: 
+Use append and prepend to add multiple nodes or strings to a parent 
+element, allowing flexibility in building complex structures like 
+social cards.
+
+Importance of Practice: While creating DOM nodes dynamically can be 
+tedious, it’s crucial for building interactive web pages, so 
+practicing this process is important for developing proficiency.
+-->
 </html>
